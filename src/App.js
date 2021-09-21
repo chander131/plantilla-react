@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Provider as ReduxProvider } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-function App() {
+import store from './store/index';
+import router from '@config/routes';
+import { CacheProvider } from '@contexts/CacheContext';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ReduxProvider store={store}>
+      <Router>
+        <CacheProvider>
+          <Switch>
+            {router.map((route, i) => (
+              <Route key={i} exact={route.exact} path={route.path} component={route.component} />
+            ))}
+          </Switch>
+        </CacheProvider>
+      </Router>
+    </ReduxProvider>
   );
 }
 
