@@ -1,7 +1,5 @@
 // Layout
 
-// Admin Pages
-
 // Pages
 import Home from '@pages/Home';
 

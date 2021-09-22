@@ -10,7 +10,7 @@
 			"@helpers/*": ["helpers/*"],
 			"@hooks/*": ["hooks/*"],
 			"@img/*": ["img/*"],
-			"@layout/*": ["layouts/*"],
+			"@layouts/*": ["layouts/*"],
 			"@libs/*": ["libs/*"],
 			"@pages/*": ["pages/*"],
 			"@actionsTypes/*": ["store/actionsTypes/*"],

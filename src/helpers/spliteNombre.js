@@ -1,15 +1,14 @@
+/**
+ * Recibe un nombre y retorna un objeto con ese nombre dividido en 4
+ * @param {string} srtNombre Nombre completo que se quiere desestructurar
+ * @returns {object} Nombre divido
+ */
 export const splitNombre = (srtNombre) => {
-	const nombres = srtNombre.split(' ');
-	const dataNombres = {
-		primerNombre: '',
-		segundoNombre: '',
-		primerApellido: '',
-		segundoApellido: '',
+	const [primerNombre = '', segundoNombre = '', primerApellido = '', segundoApellido = ''] = srtNombre.split(' ');
+	return {
+		primerNombre,
+		segundoNombre,
+		primerApellido,
+		segundoApellido,
 	};
-	if (nombres[0]) dataNombres.primerNombre = nombres[0];
-	if (nombres[1]) dataNombres.segundoNombre = nombres[1];
-	if (nombres[2]) dataNombres.primerApellido = nombres[2];
-	if (nombres[3]) dataNombres.segundoApellido = nombres[3];
-
-	return dataNombres;
 };

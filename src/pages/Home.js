@@ -1,12 +1,17 @@
 import React from 'react';
 import Bienvenida from '@components/Bienvenida';
+import styled from 'styled-components';
 
 const Home = () => (
-	<div>
+	<Contenedor>
 		<h3>Home</h3>
 		<br />
 		<Bienvenida />
-	</div>
+	</Contenedor>
 );
+
+const Contenedor = styled.div`
+	
+`;
 
 export default Home;

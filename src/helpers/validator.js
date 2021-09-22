@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/prefer-default-export
 
 export const validateQuotes = (rule, value) => {
 	try {
@@ -136,6 +135,7 @@ export const whitespace = (rule, value) => {
 		return Promise.resolve();
 	}
 };
+
 export const alphanumeric = (rule, value) => {
 	if (value) {
 		const numeros = '0123456789';

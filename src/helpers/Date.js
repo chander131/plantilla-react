@@ -1,4 +1,4 @@
-const moment = require('moment');
+import moment from 'moment';
 
 /**
  * @typedef DataIntervaloTiempo
@@ -36,6 +36,6 @@ const IntervaloTiempo = ({
 	return fechaFin.diff(fechaInicio, typeInterval);
 };
 
-module.exports = {
+export default {
 	IntervaloTiempo,
 };
