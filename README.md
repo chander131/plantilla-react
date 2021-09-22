@@ -7,6 +7,7 @@ Proyecto de react con configuraciones bases:
 -React redux
 -Alias path
 -Cache context
+-Configuracion de Eslint
 ```
 
 ## Comandos disponibles
