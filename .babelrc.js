@@ -1,10 +1,10 @@
 const aliasPath = require('./aliasPath');
 
-module.exports = (()=>({
+module.exports = (() => ({
 	"plugins": [
 		["babel-plugin-styled-components"],
 		["@babel/plugin-proposal-optional-chaining"],
-		["import", { "libraryName": "antd", libraryDirectory: "es", "style": 'css'}],
+		["import", { "libraryName": "antd", libraryDirectory: "es", "style": 'css' }],
 		["module-resolver", {
 			"alias": aliasPath
 		}]

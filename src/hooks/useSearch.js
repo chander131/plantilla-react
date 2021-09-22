@@ -20,7 +20,6 @@ import { useState, useEffect } from 'react';
  * @returns {void}
  */
 
-
 /**
  * useSearch
  * @param {optionalParams}
@@ -64,6 +63,5 @@ const useSearch = ({ whitelist = [], blacklist = [] } = {}) => {
 
 	return [filtered, setSearchValue, setSourceData];
 };
-
 
 export default useSearch;

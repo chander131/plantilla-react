@@ -11,7 +11,7 @@
 			"@hooks/*": ["hooks/*"],
 			"@img/*": ["img/*"],
 			"@layout/*": ["layouts/*"],
-			"@lib/*": ["libs/*"],
+			"@libs/*": ["libs/*"],
 			"@pages/*": ["pages/*"],
 			"@actionsTypes/*": ["store/actionsTypes/*"],
 			"@actions/*": ["store/actions/*"],

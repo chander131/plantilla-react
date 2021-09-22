@@ -5,36 +5,36 @@ import { CacheContext } from '@contexts/CacheContext';
 
 const reducer = (state, action) => {
 	switch (action.type) {
-		case 'FETCH_INIT':
-			return {
-				...state,
-				status: 0,
-				isSuccess: false,
-				isLoading: true,
-				isError: false,
-				error: null,
-				data: null,
-			};
-		case 'FETCH_SUCCESS':
-			return {
-				...state,
-				status: action.payload.status,
-				isSuccess: Math.random(),
-				isLoading: false,
-				isError: false,
-				data: action.payload.data,
-			};
-		case 'FETCH_FAILURE':
-			return {
-				...state,
-				status: action.payload.status,
-				isSuccess: false,
-				isLoading: false,
-				isError: true,
-				error: action.payload.data,
-			};
-		default:
-			throw new Error();
+	case 'FETCH_INIT':
+		return {
+			...state,
+			status: 0,
+			isSuccess: false,
+			isLoading: true,
+			isError: false,
+			error: null,
+			data: null,
+		};
+	case 'FETCH_SUCCESS':
+		return {
+			...state,
+			status: action.payload.status,
+			isSuccess: Math.random(),
+			isLoading: false,
+			isError: false,
+			data: action.payload.data,
+		};
+	case 'FETCH_FAILURE':
+		return {
+			...state,
+			status: action.payload.status,
+			isSuccess: false,
+			isLoading: false,
+			isError: true,
+			error: action.payload.data,
+		};
+	default:
+		throw new Error();
 	}
 };
 
@@ -114,7 +114,7 @@ const useDataApi = ({
 		url = null,
 		refreshCache = false,
 	} = {}) => {
-		if (state.isLoading) { return; }	//hay una solicitud en proceso
+		if (state.isLoading) { return; }	// hay una solicitud en proceso
 
 		const request = {
 			method,

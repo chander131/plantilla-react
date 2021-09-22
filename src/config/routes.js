@@ -1,8 +1,6 @@
 // Layout
 
-
 // Admin Pages
-
 
 // Pages
 import Home from '@pages/Home';
@@ -11,14 +9,14 @@ import Home from '@pages/Home';
 // import Error404 from '../pages/Error404';
 
 const routes = [
-    {
-        path: '/',
-        exact: true,
-        component: Home,
-    },
-    // {
-    //     component: Error404,
-    // }
+	{
+		path: '/',
+		exact: true,
+		component: Home,
+	},
+	// {
+	//     component: Error404,
+	// }
 ];
 
 export default routes;

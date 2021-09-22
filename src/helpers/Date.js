@@ -1,4 +1,4 @@
-const moment = require("moment");
+const moment = require('moment');
 
 /**
  * @typedef DataIntervaloTiempo
@@ -12,32 +12,30 @@ const moment = require("moment");
 
 /**
  * Calcula un intervalo de horas, dias o años
- * @function IntervaloTiempo 
+ * @function IntervaloTiempo
  * @param {DataIntervaloTiempo} datos - Objeto de datos
  * @returns {number} Intervalo de tiempo transcurrido
  */
 const IntervaloTiempo = ({
-    fInicio = new Date(),
-    formatoInicio = "DD/MM/YYYY",
-    fFin = new Date(),
-    formatoFin = "DD/MM/YYYY",
-    typeInterval = "days"
+	fInicio = new Date(),
+	formatoInicio = 'DD/MM/YYYY',
+	fFin = new Date(),
+	formatoFin = 'DD/MM/YYYY',
+	typeInterval = 'days',
 } = {}) => {
-    if (typeInterval == "hours") {
-        formatoInicio = "h:mm";
-        formatoFin = "h:mm";
-    } else if (typeInterval == "daysAndHours") {
-        formatoInicio = "DD/MM/YYYY h:mm";
-        formatoFin = "DD/MM/YYYY h:mm";
-        typeInterval = "hours"
-    }
-    let fechaInicio = moment(fInicio, formatoInicio).toDate();
-    let fechaFin = moment(fFin, formatoFin);
-    return fechaFin.diff(fechaInicio, typeInterval);
+	if (typeInterval == 'hours') {
+		formatoInicio = 'h:mm';
+		formatoFin = 'h:mm';
+	} else if (typeInterval == 'daysAndHours') {
+		formatoInicio = 'DD/MM/YYYY h:mm';
+		formatoFin = 'DD/MM/YYYY h:mm';
+		typeInterval = 'hours';
+	}
+	const fechaInicio = moment(fInicio, formatoInicio).toDate();
+	const fechaFin = moment(fFin, formatoFin);
+	return fechaFin.diff(fechaInicio, typeInterval);
 };
 
-
-
 module.exports = {
-    IntervaloTiempo,
+	IntervaloTiempo,
 };
