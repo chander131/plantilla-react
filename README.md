@@ -8,6 +8,9 @@ Proyecto de react con configuraciones bases:
 -Alias path
 -Cache context
 -Configuracion de Eslint
+-Configuracion de Pruebas Unitarias
+    -Jest
+    -Enzyme
 ```
 
 ## Comandos disponibles

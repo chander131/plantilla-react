@@ -8,5 +8,5 @@ module.exports = (() => ({
 		["module-resolver", {
 			"alias": aliasPath
 		}]
-	]
+	],
 }))();
