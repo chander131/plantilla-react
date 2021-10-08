@@ -7,10 +7,6 @@ Proyecto de react con configuraciones bases:
 -React redux
 -Alias path
 -Cache context
--Configuracion de Eslint
--Configuracion de Pruebas Unitarias
-    -Jest
-    -Enzyme
 ```
 
 ## Comandos disponibles
